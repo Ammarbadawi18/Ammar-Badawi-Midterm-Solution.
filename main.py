@@ -1,3 +1,5 @@
+import validators
+
 tabs = []
 
 # Function to handle no opened tabs error
