@@ -45,7 +45,21 @@ def closeOneTab():
   else:
     closed_tab = tabs.pop()
     print(f"Closed last opened tab: {closed_tab['Title']}")
-    
+
+# Function to display tab content
+def displayContent():
+  handleNoTabsError()
+  index = getTabIndex()
+  if index:
+    index = int(index)
+    if 1 <= index <= len(tabs):
+      url = tabs[index - 1]['URL']
+      html = urlopen(url)
+      soup = BeautifulSoup(html, 'html.parser')
+      print(soup.prettify())
+    else:
+      print("Wrong index")
+      
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
