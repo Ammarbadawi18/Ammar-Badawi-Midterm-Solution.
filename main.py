@@ -87,11 +87,19 @@ def openNestedTab():
   while not index.isdigit():
     print("Please enter a valid integer for the tab index.")
     index = input("Enter the index of the parent tab to add a nestetab:")
-    index = int(index)
-    if index <= len(tabs):
-      title = input("Enter the title of the nested tab: ")
-      url = input("Enter the URL of the nested tab: ")
-      
+  index = int(index)
+  if index <= len(tabs):
+    title = input("Enter the title of the nested tab: ")
+    url = input("Enter the URL of the nested tab: ")
+    if validators.url(url):
+      new_nested_tab = {'Title': title, 'URL': url, 'NestedTabs': []}
+      tabs[index - 1]['NestedTabs'].append(new_nested_tab)
+      print("Nested tab opened successfully.")
+    else:
+      print("Please enter a valid URL.")
+  else:
+    print("Invalid tab index.")
+    
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
