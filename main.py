@@ -124,7 +124,11 @@ def saveTabs():
 # Function to load tabs from a file and display them
 def importTabs():
   file_path = input("Enter the file path to import tabs from: ")
-  
+  try:
+    with open(file_path, 'r') as file:
+      loaded_tabs = json.load(file)
+      print("Tabs imported successfully:")
+      
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
