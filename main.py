@@ -1,3 +1,4 @@
+tabs = []
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
