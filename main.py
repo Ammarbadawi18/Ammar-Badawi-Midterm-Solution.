@@ -29,6 +29,18 @@ def openTab():
   else:
     print("Please enter a valid URL.")
 
+# Function to close a tab
+def closeOneTab():
+  handleNoTabsError()
+  index = getTabIndex()
+  if index:
+    index = int(index)
+    if 1 <= index <= len(tabs):
+      del tabs[index - 1]
+      print(f"Tab at index {index} closed.")
+    else:
+      print("Invalid tab index.")
+      
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
