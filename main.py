@@ -134,7 +134,10 @@ def importTabs():
             f"{tab_index + 1}. {tab['Title']} - URL: {tab['URL']} -Nested Tabs: {tab['NestedTabs']}")
         tabs.append(tab)
       return loaded_tabs
-      
+  except FileNotFoundError:
+    print("File not found. Please enter a valid file path.")
+    return None
+    
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
