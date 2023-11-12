@@ -111,7 +111,12 @@ def saveTabs():
   handleNoTabsError()
   file_path = input("Enter the file path to save the tabs (only .json files are accepted): ")
   if file_path.endswith('.json'):
-    
+    with open(file_path, 'w') as file:
+      json.dump(tabs, file, indent=4)
+      print("Tabs saved in JSON format.")
+  else:
+    print("Invalid file format. Please provide a .json file path.")
+  
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
