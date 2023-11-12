@@ -69,7 +69,15 @@ def displayContent():
       soup = BeautifulSoup(html, 'html.parser')
       print(soup.prettify())
       print("Last opened tab: ", last_tab['Title'])
-      
+
+# Function to display the tabs
+def displayAllTabs(tabs_list, level=0):
+  handleNoTabsError()
+  index = 1
+  for tab in tabs_list:
+    print("  " * level, end="")
+    print(f"{index}. {tab['Title']}")
+    
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
