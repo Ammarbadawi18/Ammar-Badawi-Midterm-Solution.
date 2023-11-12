@@ -151,3 +151,32 @@ def displayMenu():
   print("7. Save Tabs")
   print("8. Import Tabs")
   print("9. Exit")
+
+def main():
+  while True:
+    displayMenu()
+    choice = input("Enter your choice: ")
+    if choice == '1':
+      openTab()
+    elif choice == '2':
+      closeOneTab()
+    elif choice == '3':
+      displayContent()
+    elif choice == '4':
+      displayAllTabs(tabs)
+    elif choice == '5':
+      openNestedTab()
+    elif choice == '6':
+      clearAllTabs()
+    elif choice == '7':
+      saveTabs()
+    elif choice == '8':
+      importTabs()
+    elif choice == '9':
+      print("Goodbye!")
+      break
+    else:
+      print("Invalid choice.Try again")
+
+if __name__ == "__main__":
+  main()
