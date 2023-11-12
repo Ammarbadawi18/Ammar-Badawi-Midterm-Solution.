@@ -99,7 +99,13 @@ def openNestedTab():
       print("Please enter a valid URL.")
   else:
     print("Invalid tab index.")
-    
+
+# Function to clear all tabs
+def clearAllTabs():
+  handleNoTabsError()
+  tabs.clear()
+  print("All tabs cleared.")
+  
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
