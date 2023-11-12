@@ -107,6 +107,10 @@ def clearAllTabs():
   tabs.clear()
   print("All tabs cleared.")
 
+# Function to save tabs to a file in JSON format
+# FOR FUNCTION 7 AND 8 USED THIS WEBSITES FOR RESEARCH:
+# https://www.programiz.com/python-programming/json
+# https://www.geeksforgeeks.org/read-json-file-using-python/
 def saveTabs():
   handleNoTabsError()
   file_path = input("Enter the file path to save the tabs (only .json files are accepted): ")
