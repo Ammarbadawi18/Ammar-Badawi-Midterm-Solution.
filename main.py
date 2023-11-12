@@ -87,7 +87,11 @@ def openNestedTab():
   while not index.isdigit():
     print("Please enter a valid integer for the tab index.")
     index = input("Enter the index of the parent tab to add a nestetab:")
-    
+    index = int(index)
+    if index <= len(tabs):
+      title = input("Enter the title of the nested tab: ")
+      url = input("Enter the URL of the nested tab: ")
+      
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
