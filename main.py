@@ -1,4 +1,11 @@
 tabs = []
+
+# Function to handle no opened tabs error
+def handleNoTabsError():
+  if not tabs:
+    print("No tabs yet.")
+    return
+    
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
