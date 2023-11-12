@@ -13,11 +13,12 @@ def handleNoTabsError():
 
 # Function to deal with user entries
 def getTabIndex():
-  index = input("Enter the index of the tab (press Enter to deal with the last opened tab): " )
-  while not index.isdigit() and index != "":
-    print("Please enter a valid integer for the tab index.")
-    index = input("Enter the index of the tab (press Enter to deal with the last opened tab): ")
-  return index
+  while True:
+      index = input("Enter the index of the tab (press Enter to deal with the last opened tab): ")
+      if index == "" or index.isdigit():
+          return index
+      print("Please enter a valid integer for the tab index.")
+
 
 # Function to open a new tab
 # Made a research to know more about the validators from this website:
