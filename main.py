@@ -59,6 +59,14 @@ def displayContent():
       print(soup.prettify())
     else:
       print("Wrong index")
+  else:
+    if tabs:
+      last_tab = tabs[-1]
+      url = last_tab['URL']
+      html = urlopen(url)
+      soup = BeautifulSoup(html, 'html.parser')
+      print(soup.prettify())
+      print("Last opened tab: ", last_tab['Title'])
       
 # Function to display the menu
 def displayMenu():
