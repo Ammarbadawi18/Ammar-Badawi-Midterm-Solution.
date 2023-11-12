@@ -128,6 +128,12 @@ def importTabs():
     with open(file_path, 'r') as file:
       loaded_tabs = json.load(file)
       print("Tabs imported successfully:")
+      for tab_index in range(len(loaded_tabs)):
+        tab = loaded_tabs[tab_index]
+        print(
+            f"{tab_index + 1}. {tab['Title']} - URL: {tab['URL']} -Nested Tabs: {tab['NestedTabs']}")
+        tabs.append(tab)
+      return loaded_tabs
       
 # Function to display the menu
 def displayMenu():
