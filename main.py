@@ -17,6 +17,8 @@ def getTabIndex():
   return index
 
 # Function to open a new tab
+# Made a research to know more about the validators from this website:
+# https://medium.com/@miguendes/how-to-check-if-a-string-is-a-valid-url-in-python-fb0584aab549
 def openTab():
   title = input("Enter the title of the website: ")
   url = input("Enter the URL: ")
