@@ -80,6 +80,13 @@ def displayAllTabs(tabs_list, level=0):
     if tab['NestedTabs']:
       displayAllTabs(tab['NestedTabs'], level + 1)
     index += 1
+
+# Function to open a nested tab
+def openNestedTab():
+  index = input("Enter the index of the parent tab to add a nested tab:")
+  while not index.isdigit():
+    print("Please enter a valid integer for the tab index.")
+    index = input("Enter the index of the parent tab to add a nestetab:")
     
 # Function to display the menu
 def displayMenu():
