@@ -120,6 +120,10 @@ def saveTabs():
       print("Tabs saved in JSON format.")
   else:
     print("Invalid file format. Please provide a .json file path.")
+
+# Function to load tabs from a file and display them
+def importTabs():
+  file_path = input("Enter the file path to import tabs from: ")
   
 # Function to display the menu
 def displayMenu():
