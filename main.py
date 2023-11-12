@@ -47,6 +47,8 @@ def closeOneTab():
     print(f"Closed last opened tab: {closed_tab['Title']}")
 
 # Function to display tab content
+# USED THIS LINK TO KNOW MORE ABOUT WEB SCRAPING:
+# https://www.datacamp.com/tutorial/web-scraping-using-python
 def displayContent():
   handleNoTabsError()
   index = getTabIndex()
