@@ -16,6 +16,11 @@ def getTabIndex():
     index = input("Enter the index of the tab (press Enter to deal with the last opened tab): ")
   return index
 
+# Function to open a new tab
+def openTab():
+  title = input("Enter the title of the website: ")
+  url = input("Enter the URL: ")
+  
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
