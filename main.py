@@ -20,7 +20,13 @@ def getTabIndex():
 def openTab():
   title = input("Enter the title of the website: ")
   url = input("Enter the URL: ")
-  
+  if validators.url(url):
+    new_tab = {'Title': title, 'URL': url, 'NestedTabs': []}
+    tabs.append(new_tab)
+    print("Tab opened successfully.")
+  else:
+    print("Please enter a valid URL.")
+
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
