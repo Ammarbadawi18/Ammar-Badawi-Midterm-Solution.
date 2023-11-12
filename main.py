@@ -106,7 +106,12 @@ def clearAllTabs():
   handleNoTabsError()
   tabs.clear()
   print("All tabs cleared.")
-  
+
+def saveTabs():
+  handleNoTabsError()
+  file_path = input("Enter the file path to save the tabs (only .json files are accepted): ")
+  if file_path.endswith('.json'):
+    
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
