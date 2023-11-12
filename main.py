@@ -77,6 +77,9 @@ def displayAllTabs(tabs_list, level=0):
   for tab in tabs_list:
     print("  " * level, end="")
     print(f"{index}. {tab['Title']}")
+    if tab['NestedTabs']:
+      displayAllTabs(tab['NestedTabs'], level + 1)
+    index += 1
     
 # Function to display the menu
 def displayMenu():
