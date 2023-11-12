@@ -40,7 +40,10 @@ def closeOneTab():
       print(f"Tab at index {index} closed.")
     else:
       print("Invalid tab index.")
-      
+  else:
+    closed_tab = tabs.pop()
+    print(f"Closed last opened tab: {closed_tab['Title']}")
+    
 # Function to display the menu
 def displayMenu():
   print("Welcome to the Advanced Browser Tabs Simulation!")
